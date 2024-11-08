@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibraryMembershipApplicationForm</title>
+</head>
+<body>
+    <h1>สมัครสมาชิกห้องสมุด</h1>
+    <form>
+        <label for="fname">ชื่อ-นามสกุล</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="ename">ชื่อ-นามสกุล(ภาษาอังกฤษ)</label><br>
+        <input type="text" id="ename" name="ename"><br>
+        
+        <label for="sex">เพศ</label><br>
+        <select name="sex" id="sex">
+            <option value="none" selected>-</option>
+            <option value="ชาย">ชาย</option>
+            <option value="หญิง">หญิง</option>
+        </select><br>
+        
+        <label for="studentid">รหัสนักศึกษา</label><br>
+        <input type="text" id="studentid" name="studentid"><br>
+        <label for="study">คณะที่ศึกษา</label><br>
+        <input type="text" id="study" name="study"><br>
+        <label for="email">อีเมล</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="birth">วัน เดือน ปีเกิด</label><br>
+        <input type="date" name="birth"><br>
+        <label for="fav">ประเภทที่หนังสือสนใจ</label><br>
+        <input type="text" id="fav" name="fav"><br>
+        ความต้องการรับข่าวสารข้อมูลของห้องสมุดทางอีเมลหรือไม่ <br>
+        <input type="radio" name="yes" id="yes">
+        <label for="yes">ใช่</label>
+        <input type="radio" name="yes" id="no">
+        <label for="no">ไม่</label>
+    </form>
+</body>
+</html>
