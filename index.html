@@ -1,40 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LibraryMembershipApplicationForm</title>
+    <title>Library Membership Application Form</title>
 </head>
 <body>
-    <h1>สมัครสมาชิกห้องสมุด</h1>
+
+    <h1>Library Membership Application Form</h1>
     <form>
-        <label for="fname">ชื่อ-นามสกุล</label><br>
-        <input type="text" id="fname" name="fname"><br>
-        <label for="ename">ชื่อ-นามสกุล(ภาษาอังกฤษ)</label><br>
-        <input type="text" id="ename" name="ename"><br>
-        
-        <label for="sex">เพศ</label><br>
-        <select name="sex" id="sex">
-            <option value="none" selected>-</option>
-            <option value="ชาย">ชาย</option>
-            <option value="หญิง">หญิง</option>
-        </select><br>
-        
-        <label for="studentid">รหัสนักศึกษา</label><br>
-        <input type="text" id="studentid" name="studentid"><br>
-        <label for="study">คณะที่ศึกษา</label><br>
-        <input type="text" id="study" name="study"><br>
-        <label for="email">อีเมล</label><br>
-        <input type="email" id="email" name="email"><br>
-        <label for="birth">วัน เดือน ปีเกิด</label><br>
-        <input type="date" name="birth"><br>
-        <label for="fav">ประเภทที่หนังสือสนใจ</label><br>
-        <input type="text" id="fav" name="fav"><br>
-        ความต้องการรับข่าวสารข้อมูลของห้องสมุดทางอีเมลหรือไม่ <br>
-        <input type="radio" name="yes" id="yes">
-        <label for="yes">ใช่</label>
-        <input type="radio" name="yes" id="no">
-        <label for="no">ไม่</label>
+        <!-- ชื่อ-นามสกุล ภาษาไทย -->
+        <label for="thai-name">ชื่อ-นามสกุล (ภาษาไทย) *</label>
+        <input type="text" id="thai-name" name="thai_name" required>
+        <br>
+
+        <!-- ชื่อ-นามสกุล ภาษาอังกฤษ -->
+        <label for="eng-name">ชื่อ-นามสกุล (ภาษาอังกฤษ) *</label>
+        <input type="text" id="eng-name" name="eng_name" required>
+        <br>
+
+        <!-- เพศ -->
+        <label>เพศ *</label><br>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">ชาย</label><br>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">หญิง</label><br>
+        <input type="radio" id="other" name="gender" value="other" required>
+        <label for="other">อื่น ๆ</label>
+        <br>
+
+        <!-- รหัสนักศึกษา -->
+        <label for="student-id">รหัสนักศึกษา *</label>
+        <input type="text" id="student-id" name="student_id" required pattern="\d{10}" title="กรุณากรอกตัวเลข 10 หลัก">
+        <br>
+
+        <!-- คณะที่ศึกษา -->
+        <label for="faculty">คณะที่ศึกษา *</label>
+        <input type="text" id="faculty" name="faculty" required>
+        <br>
+
+        <!-- ที่อยู่อีเมล -->
+        <label for="email">ที่อยู่อีเมล *</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+        <!-- วันเดือนปีเกิด -->
+        <label for="dob">วันเดือนปีเกิด *</label>
+        <input type="date" id="dob" name="dob" required>
+        <br>
+
+        <!-- ประเภทของหนังสือที่สนใจ -->
+        <label for="book-type">ประเภทของหนังสือที่สนใจ</label>
+        <select id="book-type" name="book_type" required>
+            <option value="">เลือกประเภทหนังสือ</option>
+            <option value="fiction">นวนิยาย</option>
+            <option value="non-fiction">สารคดี</option>
+            <option value="education">การศึกษา</option>
+            <option value="technology">เทคโนโลยี</option>
+            <option value="art">ศิลปะ</option>
+        </select>
+        <br>
+
+        <!-- ต้องการรับข่าวสารข้อมูลของห้องสมุดทางอีเมลหรือไม่ -->
+        <label>ต้องการรับข่าวสารข้อมูลของห้องสมุดทางอีเมลหรือไม่</label><br>
+        <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+        <label for="subscribe">ใช่, ฉันต้องการรับข่าวสาร</label>
+        <br>
+
+        <!-- ปุ่ม submit -->
+        <button type="submit">ส่งใบสมัคร</button>
     </form>
+
 </body>
 </html>
